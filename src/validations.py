@@ -1,5 +1,6 @@
-from pydantic import BaseModel, Field
 from typing import Optional
+
+from pydantic import BaseModel, Field
 
 
 class Chat(BaseModel):
@@ -29,7 +30,7 @@ class Message(BaseModel):
     date: Optional[int]
     chat: Optional[Chat]
     message_id: Optional[str]
-    from_field: From = Field(alias='from')
+    from_field: From = Field(alias="from")
     text: Optional[str]
 
 
@@ -51,7 +52,7 @@ class OtherChatMember(BaseModel):
 class MyChatMember(BaseModel):
     rand_int: Optional[int]
     chat: Optional[ChatGroup]
-    from_field: Optional[From] = Field(alias='from')
+    from_field: Optional[From] = Field(alias="from")
     date: Optional[int]
     old_chat_member: Optional[OtherChatMember]
     new_chat_member: Optional[OtherChatMember]
