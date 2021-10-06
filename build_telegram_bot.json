@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "78f9cb23-ecc8-4b46-a582-05ff82655ef5",
+		"name": "Telegram API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "telegram api sendMessage with your bot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": 8611260572, \n    \"text\": \"Hello Bot\", \n    \"parse_mode\": \"Markdown\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/sendMessage",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "telegram api getWebHookInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "telegram api setWebHookInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\" : \"{{URL}}/webhook/{{TOKEN}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{TOKEN}}/setWebhook",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{TOKEN}}",
+						"setWebhook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send a message to your bot",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"update_id\": 10000,\n    \"message\": {\n        \"date\": 1441645532,\n        \"chat\": {\n            \"last_name\": \"Test Lastname\",\n            \"type\": \"private\",\n            \"id\": 1111111,\n            \"first_name\": \"Test Firstname\",\n            \"username\": \"Testusername\"\n        },\n        \"message_id\": 1365,\n        \"from\": {\n            \"last_name\": \"Test Lastname\",\n            \"id\": 1111111,\n            \"first_name\": \"Test Firstname\",\n            \"username\": \"Testusername\"\n        },\n        \"text\": \"/start\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/webhook/{{TOKEN}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"webhook",
+						"{{TOKEN}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
