@@ -4,8 +4,13 @@ _By FarukOzderim_
 
 ## Description
 
-An easy start for a telegram bot. This bot returns messages to the sender immediately.
+An easy start for a telegram bot server. This bot returns messages to the sender immediately.
 
+## Installation
+
+```
+pip3 install -r requirements.txt
+```
 ## Configure
 
 - Create your bot and get your bot_token from @BotFather in telegram.
