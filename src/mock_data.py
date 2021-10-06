@@ -1,4 +1,4 @@
-from .validations import ReplyMessage, MessageBodyModel
+from .validations import MessageBodyModel, ReplyMessage
 
 mock_reply_message = ReplyMessage(**{
     "date": 1441645000,
