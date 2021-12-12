@@ -1,4 +1,4 @@
-from .validations import MessageBodyModel, ReplyMessage
+from validations import MessageBodyModel, ReplyMessage
 
 mock_reply_message = ReplyMessage(
     **{

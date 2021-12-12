@@ -1,4 +1,4 @@
-black
 fastapi
-pip-tools
 uvicorn
+pyngrok
+httpx
